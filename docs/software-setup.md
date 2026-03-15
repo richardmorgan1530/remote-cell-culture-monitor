@@ -219,12 +219,12 @@ Each thread exposes a separate port.
 
 # Typical Camera Ports
 
-  Camera     Stream Port
-  ---------- -------------
-  Camera 1   8081
-  Camera 2   8083
-  Camera 3   8085
-  Camera 4   8087
+| Camera   | Stream Port |
+| -------- | ----------- |
+| Camera 1 | 8081        |
+| Camera 2 | 8083        |
+| Camera 3 | 8085        |
+| Camera 4 | 8087        |
 
 ------------------------------------------------------------------------
 
