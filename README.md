@@ -260,7 +260,7 @@ laboratory safety guidelines.
 ------------------------------------------------------------------------
 
 # Project Structure
-
+```
 remote-cell-culture-monitor 
 │ 
 ├── README.md 
@@ -277,9 +277,9 @@ remote-cell-culture-monitor
 │    └── README.md
 ├── web
 │    └── index.html
-├── hardware
+└── hardware
      └── bill-of-materials.md
-
+```
 
 ------------------------------------------------------------------------
 
