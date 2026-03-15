@@ -222,9 +222,9 @@ Each thread exposes a separate port.
 | Camera   | Stream Port |
 | -------- | ----------- |
 | Camera 1 | 8081        |
-| Camera 2 | 8083        |
-| Camera 3 | 8085        |
-| Camera 4 | 8087        |
+| Camera 2 | 8082        |
+| Camera 3 | 8083        |
+| Camera 4 | 8084        |
 
 ------------------------------------------------------------------------
 
