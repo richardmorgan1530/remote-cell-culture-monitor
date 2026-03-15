@@ -261,9 +261,25 @@ laboratory safety guidelines.
 
 # Project Structure
 
-remote-cell-culture-monitor │ ├── README.md ├── LICENSE ├── CITATION.cff
-│ ├── docs/ ├── scripts/ ├── configs/ ├── web/ ├── app/ ├── hardware/
-├── examples/ └── tests/
+remote-cell-culture-monitor 
+│ 
+├── README.md 
+├── LICENSE 
+├── CITATION.cff
+│ 
+├── docs
+│    ├── hardware-setup.md
+│    └── software-setup.md
+├── scripts
+│    ├── install.sh
+│    └── start_stream.sh
+├── configs
+│    └── README.md
+├── web
+│    └── index.html
+├── hardware
+     └── bill-of-materials.md
+
 
 ------------------------------------------------------------------------
 
