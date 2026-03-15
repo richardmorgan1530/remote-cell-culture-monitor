@@ -193,7 +193,9 @@ ls /dev/video\*
 ```
 Example:
 ```
-/dev/video0 /dev/video1 /dev/video2
+/dev/video0
+/dev/video1
+/dev/video2
 ```
 You can also use:
 ```
