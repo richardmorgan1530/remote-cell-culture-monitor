@@ -117,7 +117,7 @@ Required software components:
 
 -   Raspberry Pi OS
 -   Python 3.10+
--   MJPEG streaming software (e.g. mjpg-streamer)
+-   Motion for USB camera streaming and web-based monitoring
 -   Apache or Nginx web server
 -   Optional secure tunnel (e.g. Cloudflare Tunnel)
 
