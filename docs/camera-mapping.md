@@ -18,8 +18,8 @@ detected.
 
 If cameras are configured using:
 
-/dev/video0 
-/dev/video1 
+/dev/video0
+/dev/video1
 /dev/video2
 
 the numbering may change after:
