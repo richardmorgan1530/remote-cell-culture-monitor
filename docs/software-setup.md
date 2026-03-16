@@ -167,7 +167,16 @@ Motion configuration files are located in:
 ```
 /etc/motion/
 ```
-Example contents:
+Default contents:
+```
+/etc/motion
+├── motion.conf
+├── camera1-dist.conf
+├── camera2-dist.conf
+├── camera3-dist.conf
+└── camera4-dist.conf
+```
+New contents:
 ```
 /etc/motion
 ├── motion.conf
@@ -177,23 +186,48 @@ Example contents:
 └── thread4.conf
 ```
 Each **thread file** corresponds to one camera.
-
 ------------------------------------------------------------------------
 
-# Enable Motion Service
+# Install Motion Configuration
 
-Enable Motion to start automatically:
+Clone the repository to the Raspberry Pi from the terminal:
+
 ```
-sudo systemctl enable motion
+cd ~
+git clone https://github.com/richardmorgan1530/remote-cell-culture-monitor.git
 ```
-Start Motion:
+
+Enter the repository directory:
+
 ```
-sudo systemctl start motion
+cd remote-cell-culture-monitor
 ```
-Check service status:
+
+Copy the Motion configuration files:
+
 ```
-sudo systemctl status motion
+sudo cp configs/motion/motion.conf /etc/motion/
+sudo cp configs/motion/thread*.conf /etc/motion/
+sudo rm /etc/motion/camera*-dist.conf
 ```
+------------------------------------------------------------------------
+
+# Attach USB Cameras
+
+Connect the USB cameras to the Raspberry Pi 5 before starting Motion.
+
+Plug each camera into one of the Raspberry Pi USB ports.
+
+Example setup:
+
+Camera 1 → USB port (top left)  
+Camera 2 → USB port (bottom left)  
+Camera 3 → USB port (top right)  
+Camera 4 → USB port (bottom right)
+
+Using fixed USB ports helps maintain stable device paths when the
+system is rebooted.
+
 ------------------------------------------------------------------------
 
 # Detect USB Cameras
@@ -214,15 +248,51 @@ v4l2-ctl --list-devices
 ```
 ------------------------------------------------------------------------
 
+# Enable Motion Service
+
+Enable Motion to start automatically:
+```
+sudo systemctl enable motion
+```
+Start Motion:
+```
+sudo systemctl start motion
+```
+Check service status:
+```
+sudo systemctl status motion
+```
+------------------------------------------------------------------------
+
 # Test Camera Stream
 
 Once Motion is running, open:
 ```
-http://`<raspberry-pi-ip>`{=html}:8081
+http://`<raspberry-pi-ip>`:8081
 ```
-Example:
+Example for Camera 1:
 ```
 http://192.168.1.50:8081
+or
+http://raspberrypi.local:8081
+```
+Example for Camera 2:
+```
+http://192.168.1.50:8082
+or
+http://raspberrypi.local:8082
+```
+Example for Camera 3:
+```
+http://192.168.1.50:8083
+or
+http://raspberrypi.local:8083
+```
+Example for Camera 4:
+```
+http://192.168.1.50:8084
+or
+http://raspberrypi.local:8084
 ```
 Each thread exposes a separate port.
 
