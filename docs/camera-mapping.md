@@ -22,7 +22,7 @@ If cameras are configured using:
 /dev/video1
 /dev/video2
 
-the numbering may change after:
+The numbering may change after:
 
 -   rebooting the Raspberry Pi
 -   unplugging and reconnecting cameras
