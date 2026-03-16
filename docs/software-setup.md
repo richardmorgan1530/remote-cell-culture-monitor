@@ -29,52 +29,59 @@ Tested configuration:
 
 # Install Raspberry Pi OS (Headless)
 
-Download the **Raspberry Pi Imager** from:
+Download the latest version of **Raspberry Pi Imager** e.g. v2.0.6 from:
 
 https://www.raspberrypi.com/software/
 
 Insert your microSD card and select:
 
-Raspberry Pi OS Lite (64-bit)
+Raspberry Pi OS (Other) -> Raspberry Pi OS Lite (64-bit)
 
 This version has **no desktop environment**, which reduces system
 overhead and improves stability for server applications.
 
 ------------------------------------------------------------------------
 
-# Configure Headless Access
+# Configure Customisations
 
-Before flashing the OS, apply OS customisation settings **'EDIT SETTINGS'** in Raspberry Pi Imager.
+Before flashing the OS, apply OS customisation settings in Raspberry Pi Imager.
 
-General Tab Enable:
-
--   Set hostname (optional)
+-   Set hostname e.g.: raspberrypi
 -   Set username and password
--   Configure wireless LAN (if not using ethernet)
-
-Services Tab Enable:
-
+-   Configure WiFi
 -   Enable SSH (Use password authentication)
+-   Dont Enable Raspberry Pi Connect
 
-Flash the SD card and insert it into the Raspberry Pi.
+WRITE the SD card and when done, insert it into the Raspberry Pi.
 
-Boot the Raspberry Pi and connect via SSH.
+For simplicity, first time booting a fresh installation, connect a PC monitor, keyboard and mouse to the Raspberry Pi.
 
-Example:
+Boot the Raspberry Pi.
+
+Login to the Raspberry Pi.
+
+In future you can remove the PC monitor, keyboard and mouse and instead connect via SSH.
+
+Example from Windows terminal using the hostname you previously set:
 ```
 ssh pi@raspberrypi.local
 ```
-or
+Type yes when prompted. 
+
+Alternatively if you know the Raspberry Pi IP address for example if it was 192.168.1.50, then:
 ```
 ssh pi@192.168.1.50
 ```
+Type yes when prompted.
+
 ------------------------------------------------------------------------
 
 # Update the System
 
-Once connected, update the OS:
+Once connected via ssh using Windows Terminal, update the OS:
 ```
-sudo apt update sudo apt upgrade -y
+sudo apt update
+sudo apt upgrade -y
 ```
 ------------------------------------------------------------------------
 
@@ -88,7 +95,7 @@ Verify the service is running:
 ```
 sudo systemctl status apache2
 ```
-You should see something similar to:
+Among the text you should see something similar to:
 ```
 Active: active (running)
 ```
@@ -96,11 +103,13 @@ Active: active (running)
 
 # Test the Web Server
 
-Open a browser on your local network and navigate to:
+If you set your hostname to 'raspberrypi' previously then open a browser on your local network and navigate to:
 ```
-http://`<raspberry-pi-ip>`{=html}
+http://raspberrypi.local
 ```
-Example:
+Otherwise replace 'raspberrypi' above with the hostname you choose. 
+
+Or if you know the IP address of your Raspberry Pi, example:
 ```
 http://192.168.1.50
 ```
