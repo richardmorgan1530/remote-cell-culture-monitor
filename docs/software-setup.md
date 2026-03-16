@@ -46,13 +46,13 @@ overhead and improves stability for server applications.
 
 Before flashing the OS, apply OS customisation settings **'EDIT SETTINGS'** in Raspberry Pi Imager.
 
-In the General Tab Enable:
+General Tab Enable:
 
 -   Set hostname (optional)
 -   Set username and password
 -   Configure wireless LAN (if not using ethernet)
 
-In the Services Tab Enable:
+Services Tab Enable:
 
 -   Enable SSH (Use password authentication)
 
