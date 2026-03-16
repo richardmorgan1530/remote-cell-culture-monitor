@@ -44,15 +44,17 @@ overhead and improves stability for server applications.
 
 # Configure Headless Access
 
-Before flashing the OS, open **Advanced Options** in Raspberry Pi
-Imager.
+Before flashing the OS, apply OS customisation settings **'EDIT SETTINGS'** in Raspberry Pi Imager.
 
-Enable:
+In the General Tab Enable:
 
--   Enable SSH
 -   Set hostname (optional)
--   Configure WiFi (if not using ethernet)
 -   Set username and password
+-   Configure wireless LAN (if not using ethernet)
+
+In the Services Tab Enable:
+
+-   Enable SSH (Use password authentication)
 
 Flash the SD card and insert it into the Raspberry Pi.
 
