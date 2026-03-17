@@ -281,7 +281,8 @@ v4l2-ctl --list-devices
 <p align="center">
   <img src="images/list-devices.png" width="450"><br>
 </p>
-Display a USB camera - image compression specs:
+
+Display CAM1 image compression specs:
 ```
 v4l2-ctl --device=/dev/video0 --list-formats-ext
 ```
