@@ -257,7 +257,7 @@ thread /etc/motion/thread2.conf
 #thread /etc/motion/thread3.conf
 #thread /etc/motion/thread4.conf
 ```
-After editing close and Save the file:
+After editing close and save the file:
 ```
 ctrl + x
 Y
