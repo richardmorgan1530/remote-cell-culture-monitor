@@ -216,16 +216,19 @@ sudo rm /etc/motion/camera*-dist.conf
 
 Connect the USB cameras to the Raspberry Pi 5 before starting Motion.
 
-![Raspberry Pi 5 USB Ports](images/raspi-usb-ports.png)
+<p align="center">
+  <img src="images/raspi-usb-ports.png" width="450"><br>
+  <em>Figure: Raspberry Pi 5 USB ports showing positions used for CAM1–CAM4 mapping.</em>
+</p>
 
 Plug each camera into one of the Raspberry Pi USB ports.
 
 Example setup:
 
-Camera 1 → USB port (top left)  
-Camera 2 → USB port (bottom left)  
-Camera 3 → USB port (top right)  
-Camera 4 → USB port (bottom right)
+CAM1 → USB port (top left)  
+CAM2 → USB port (bottom left)  
+CAM3 → USB port (top right)  
+CAM4 → USB port (bottom right)
 
 Using fixed USB ports helps maintain stable device paths when the
 system is rebooted.
