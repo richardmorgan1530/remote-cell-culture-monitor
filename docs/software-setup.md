@@ -348,6 +348,41 @@ Each thread exposes a separate port.
 | Camera 4 | 8084        |
 ------------------------------------------------------------------------
 
+# Set Static IP Address (Raspberry Pi 5)
+
+Raspberry Pi OS (Bookworm) uses NetworkManager. A static IP can be set
+using the `nmcli` command.
+
+List available network connections:
+
+```
+nmcli connection show
+```
+
+Set a static IP address (example: 192.168.1.50):
+
+```
+sudo nmcli connection modify "Your WiFi network name" \
+ipv4.addresses 192.168.1.50/24 \
+ipv4.gateway 192.168.1.1 \
+ipv4.dns 192.168.1.1 \
+ipv4.method manual
+```
+
+Apply the changes:
+
+```
+sudo nmcli connection down "Your WiFi network name"
+sudo nmcli connection up "Your WiFi network name"
+```
+
+Verify the IP address:
+
+```
+hostname -I
+```
+------------------------------------------------------------------------
+
 # Configure Remote Access (Cloudflare Domain + Port Forwarding)
 
 This project supports remote viewing of camera streams using a domain
