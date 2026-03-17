@@ -272,16 +272,6 @@ camera device is not connected.
 
 List connected cameras:
 ```
-ls /dev/video\*
-```
-Example:
-```
-/dev/video0
-/dev/video1
-/dev/video2
-```
-You can also use:
-```
 v4l2-ctl --list-devices
 ```
 Display a USB camera - image compression specs:
