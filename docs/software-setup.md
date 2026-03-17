@@ -385,8 +385,8 @@ via a public domain name.
 
 ## Step 1: Configure Port Forwarding
 
-Log into your router (e.g. Vodafone Gigabox) and forward the following ports
-to your Raspberry Pi local IP address:
+Log into your router (e.g. cheap SIM card WiFi Router or mobile WiFi Router) and
+forward the following ports to your Raspberry Pi local IP address:
 
 | Camera | Internal Port | External Port |
 |-------|-------------|--------------|
