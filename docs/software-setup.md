@@ -233,6 +233,38 @@ CAM4 → USB port (bottom right)
 Using fixed USB ports helps maintain stable device paths when the
 system is rebooted.
 
+# Note: Using Fewer Than Four Cameras
+
+If fewer than four USB cameras are connected, you must disable the unused
+camera threads in the Motion configuration file.
+
+Open the Motion configuration file:
+```
+sudo nano /etc/motion/motion.conf
+```
+Locate the thread definitions at the bottom of the file:
+```
+thread /etc/motion/thread1.conf
+thread /etc/motion/thread2.conf
+thread /etc/motion/thread3.conf
+thread /etc/motion/thread4.conf
+```
+Comment out any unused cameras by adding `#` at the beginning of the line.
+Example (2 cameras only):
+```
+thread /etc/motion/thread1.conf
+thread /etc/motion/thread2.conf
+#thread /etc/motion/thread3.conf
+#thread /etc/motion/thread4.conf
+```
+After editing close and Save the file:
+```
+ctrl + x
+Y
+press enter
+```
+Unused thread configurations may cause errors if the corresponding
+camera device is not connected.
 ------------------------------------------------------------------------
 
 # Detect USB Cameras
@@ -250,6 +282,10 @@ Example:
 You can also use:
 ```
 v4l2-ctl --list-devices
+```
+Display a USB camera - image compression specs:
+```
+v4l2-ctl --device=/dev/video0 --list-formats-ext
 ```
 ------------------------------------------------------------------------
 
