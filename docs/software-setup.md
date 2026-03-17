@@ -265,6 +265,7 @@ press enter
 ```
 Unused thread configurations may cause errors if the corresponding
 camera device is not connected.
+
 ------------------------------------------------------------------------
 
 # Detect USB Cameras
