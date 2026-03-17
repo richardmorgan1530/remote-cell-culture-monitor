@@ -346,6 +346,140 @@ Each thread exposes a separate port.
 | Camera 2 | 8082        |
 | Camera 3 | 8083        |
 | Camera 4 | 8084        |
+------------------------------------------------------------------------
+
+# Configure Remote Access (Cloudflare Domain + Port Forwarding)
+
+This project supports remote viewing of camera streams using a domain
+registered with Cloudflare and router port forwarding.
+
+This setup allows external access to the Raspberry Pi camera streams
+via a public domain name.
+
+------------------------------------------------------------------------
+
+## Requirements
+
+- A domain name managed through Cloudflare (e.g. yourdomain.com)
+- Access to your router configuration
+- Raspberry Pi connected to the local network
+- Motion running and accessible locally
+
+------------------------------------------------------------------------
+
+## Step 1: Configure Port Forwarding
+
+Log into your router (e.g. Vodafone Gigabox) and forward the following ports
+to your Raspberry Pi local IP address:
+
+| Camera | Internal Port | External Port |
+|-------|-------------|--------------|
+| Camera 1 | 8081 | 8081 |
+| Camera 2 | 8082 | 8082 |
+| Camera 3 | 8083 | 8083 |
+| Camera 4 | 8084 | 8084 |
+
+Example Raspberry Pi IP:
+
+```
+192.168.1.50
+```
+
+------------------------------------------------------------------------
+
+## Step 2: Configure DNS in Cloudflare
+
+Log into your Cloudflare dashboard and go to:
+
+DNS → Records
+
+Create an **A record**:
+
+```
+Type: A
+Name: cams
+IPv4 address: <your-public-ip>
+Proxy status: DNS only (grey cloud)
+```
+
+⚠️ Important:
+
+- Set **Proxy status to "DNS only" (grey cloud)**  
+- Cloudflare proxy (orange cloud) does NOT support arbitrary ports like 8081–8084
+
+------------------------------------------------------------------------
+
+## Step 3: Access Camera Streams
+
+You can now access your cameras remotely:
+
+```
+http://cams.yourdomain.com:8081
+http://cams.yourdomain.com:8082
+http://cams.yourdomain.com:8083
+http://cams.yourdomain.com:8084
+```
+
+------------------------------------------------------------------------
+
+## Optional: Subdomains per Camera
+
+You may create separate DNS entries:
+
+```
+cam1.yourdomain.com → <public-ip>
+cam2.yourdomain.com → <public-ip>
+cam3.yourdomain.com → <public-ip>
+cam4.yourdomain.com → <public-ip>
+```
+
+Access:
+
+```
+http://cam1.yourdomain.com:8081
+http://cam2.yourdomain.com:8082
+```
+
+------------------------------------------------------------------------
+
+## Dynamic IP Addresses
+
+If your ISP assigns a dynamic IP address, you must update Cloudflare DNS
+when the IP changes.
+
+Options:
+
+- Manual update via Cloudflare dashboard
+- Use a Dynamic DNS (DDNS) script or client
+- Use Cloudflare API for automatic updates
+
+------------------------------------------------------------------------
+
+## Security Considerations
+
+⚠️ This method exposes your Raspberry Pi directly to the internet.
+
+Recommended precautions:
+
+- Change default passwords
+- Disable SSH password login (use SSH keys)
+- Limit open ports to only required camera ports
+- Use a firewall (e.g. ufw)
+- Avoid exposing unnecessary services
+
+------------------------------------------------------------------------
+
+## Notes
+
+- Ensure Motion is running before remote access
+- Verify local access first:
+
+```
+http://<raspberry-pi-ip>:8081
+```
+
+- Some ISPs block inbound ports — check router and ISP restrictions
+- If streams fail to load, verify port forwarding and DNS settings
 
 ------------------------------------------------------------------------
 
