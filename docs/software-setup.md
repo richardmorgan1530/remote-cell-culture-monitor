@@ -216,6 +216,8 @@ sudo rm /etc/motion/camera*-dist.conf
 
 Connect the USB cameras to the Raspberry Pi 5 before starting Motion.
 
+![Raspberry Pi 5 USB Ports](docs/images/raspi-usb-ports.png)
+
 Plug each camera into one of the Raspberry Pi USB ports.
 
 Example setup:
