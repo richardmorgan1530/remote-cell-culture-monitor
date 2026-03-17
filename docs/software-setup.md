@@ -361,9 +361,25 @@ via a public domain name.
 ## Requirements
 
 - A domain name managed through Cloudflare (e.g. yourdomain.com)
-- Access to your router configuration
-- Raspberry Pi connected to the local network
-- Motion running and accessible locally
+- Raspberry Pi connected to your public router
+- Access to your public router configuration (e.g. personal SIM mobile router)
+  
+  ⚠️ Note (Institutional Networks)
+
+      If you are using a university or institutional network, you may not have
+      permission to configure router settings or port forwarding.
+      
+      In these environments:
+      
+      - Port forwarding is typically disabled
+      - Inbound connections from the internet are blocked
+      - Network configuration is controlled by IT services
+      
+      In this case, direct remote access using a domain and port forwarding
+      will not work.
+      
+      Alternative solutions such as personal SIM mobile router, secure tunnels (e.g. Cloudflare Tunnel)
+      or VPN-based access should be used instead.
 
 ------------------------------------------------------------------------
 
