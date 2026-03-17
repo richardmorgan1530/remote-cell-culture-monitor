@@ -270,6 +270,10 @@ camera device is not connected.
 
 # Detect USB Cameras
 
+If not installed:
+```
+v4l2-ctl --list-devices
+```
 List connected cameras:
 ```
 v4l2-ctl --list-devices
