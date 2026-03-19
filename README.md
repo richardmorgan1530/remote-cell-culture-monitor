@@ -145,7 +145,7 @@ bash scripts/start_stream.sh
 
 Open the web viewer:
 
-http://`<raspberry-pi-ip-address>`{=html}
+http://`<raspberry-pi-ip-address>`
 
 For secure internet access configuration see:
 
