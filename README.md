@@ -106,9 +106,9 @@ Optional hardware:
 -   environmental monitoring modules
 
 Detailed hardware setup instructions are available in:
-
+```
 docs/hardware-setup.md
-
+```
 ------------------------------------------------------------------------
 
 # Software Requirements
@@ -122,35 +122,35 @@ Required software components:
 -   Optional secure tunnel (e.g. Cloudflare Tunnel)
 
 Installation instructions:
-
+```
 docs/software-setup.md
-
+```
 ------------------------------------------------------------------------
 
 # Quick Start
 
 Clone the repository:
-
+```
 git clone
 https://github.com/richardmorgan1530/remote-cell-culture-monitor.git cd
 remote-cell-culture-monitor
-
+```
 Install dependencies:
-
+```
 bash scripts/install.sh
-
+```
 Start the camera stream:
-
+```
 bash scripts/start_stream.sh
-
+```
 Open the web viewer:
-
+```
 http://`<raspberry-pi-ip-address>`
-
+```
 For secure internet access configuration see:
-
+```
 docs/network-access.md
-
+```
 ------------------------------------------------------------------------
 
 # Web Interface
@@ -164,9 +164,9 @@ to:
 -   monitor system status
 
 Example interface:
-
+```
 web/index.html
-
+```
 ------------------------------------------------------------------------
 
 # Snapshot and Timelapse Imaging
@@ -174,17 +174,17 @@ web/index.html
 The platform supports image capture for experiment documentation.
 
 Example snapshot command:
-
+```
 bash scripts/capture_snapshot.sh
-
+```
 Optional timelapse:
-
+```
 bash scripts/timelapse.sh
-
+```
 Captured images are stored in:
-
+```
 data/images/
-
+```
 ------------------------------------------------------------------------
 
 # Security Considerations
