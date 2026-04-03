@@ -88,7 +88,7 @@ Possible use cases include:
 # Hardware Requirements
 
 Minimum tested configuration:
-
+```
   Component               Example
   ----------------------- ---------------------------------------
   Single-board computer   Raspberry Pi 4 or Raspberry Pi 5
@@ -97,7 +97,7 @@ Minimum tested configuration:
   Network                 Ethernet or WiFi
   Mount                   microscope stand or custom holder
   Power                   5V / 3A power supply
-
+```
 Optional hardware:
 
 -   LED illumination ring
@@ -201,9 +201,9 @@ Recommended deployment includes:
 -   secure tunneling (e.g. Cloudflare Tunnel)
 
 Security documentation:
-
+```
 docs/security.md
-
+```
 ------------------------------------------------------------------------
 
 # Reproducibility
@@ -220,15 +220,15 @@ The repository therefore includes:
 -   validation images
 
 Detailed documentation can be found in:
-
+```
 docs/
-
+```
 ------------------------------------------------------------------------
 
 # Validation
 
 Example validation parameters (tested configuration):
-
+```
   Parameter                   Result
   --------------------------- ---------------
   Raspberry Pi model          Pi 5
@@ -236,11 +236,11 @@ Example validation parameters (tested configuration):
   Stream latency              \~1--2 s
   Continuous runtime tested   72 hours
   Network access              secure tunnel
-
+```
 Example images are available in:
-
+```
 examples/sample-images/
-
+```
 ------------------------------------------------------------------------
 
 # Limitations
@@ -303,9 +303,9 @@ Possible areas of development include:
 -   improved web interface
 
 Please see:
-
+```
 CONTRIBUTING.md
-
+```
 ------------------------------------------------------------------------
 
 # Citation
@@ -313,15 +313,15 @@ CONTRIBUTING.md
 If you use this project in research or teaching, please cite it.
 
 Example citation:
-
+```
 Morgan R. Remote Cell Culture Monitor: an open-source Raspberry Pi
 platform for remote microscopy-based culture monitoring. GitHub
 repository.
-
+```
 Formal citation metadata is provided in:
-
+```
 CITATION.cff
-
+```
 ------------------------------------------------------------------------
 
 # License
@@ -329,15 +329,16 @@ CITATION.cff
 This project is released under the MIT License.
 
 See:
-
+```
 LICENSE
-
+```
 ------------------------------------------------------------------------
 
 # Contact
 
 Project maintainer:
-
+```
 Richard Morgan\
 MSc Regenerative Medicine\
 University of Galway
+```
