@@ -4,9 +4,7 @@
 ![Language](https://img.shields.io/badge/python-3.11-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 ![Status](https://img.shields.io/badge/status-active%20development-brightgreen)
-<p align="center">
-  <img src="images/PuTTY-login.png" width="602"><br>
-</p>
+
 Remote Cell Culture Monitor is an open-source Raspberry Pi--based
 platform for remotely observing cell cultures using a USB microscope
 camera over a secure internet connection.
