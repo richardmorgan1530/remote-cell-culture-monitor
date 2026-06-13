@@ -1,4 +1,4 @@
-# Software Setup
+# Software Setup - microscope camera
 
 This guide describes how to install and configure the software required
 to run the **Remote Cell Culture Monitor** system on a **Raspberry Pi
