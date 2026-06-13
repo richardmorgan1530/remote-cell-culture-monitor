@@ -63,17 +63,15 @@ Camera 1 → Top Left USB port → IP Port 8081 (i will remove this later)
 Camera 2 → Bottom Left USB port → IP Port 8082 (i will remove this later)
 Camera 3 → Top Right USB port → IP Port 8083 (i will remove this later)
 Camera 4 → Bottom Right USB port→ IP Port 8084 (i will remove this later)
-
 Microscope → Top Left USB port → IP Port 8085 
 ```
 Each camera is configured in a separate Motion thread configuration
 file.
 ```
-thread1.conf → Camera 1 (i will remove this later)
-thread2.conf → Camera 2 (i will remove this later)
-thread3.conf → Camera 3 (i will remove this later)
-thread4.conf → Camera 4 (i will remove this later)
-
+thread1.conf → Camera 1 (not used in this project)
+thread2.conf → Camera 2 (not used in this project)
+thread3.conf → Camera 3 (not used in this project)
+thread4.conf → Camera 4 (not used in this project)
 microscope.conf → Microscope Camera connected to top left USB port
 ```
 ------------------------------------------------------------------------
@@ -103,10 +101,10 @@ To confirm cameras are mapped correctly:
 
 Example:
 ```
-http://`<raspberry-pi-ip>`:8081
-http://`<raspberry-pi-ip>`:8082
-http://`<raspberry-pi-ip>`:8083
-http://`<raspberry-pi-ip>`:8084
+http://`<raspberry-pi-ip>`:8081 (not used in this project)
+http://`<raspberry-pi-ip>`:8082 (not used in this project)
+http://`<raspberry-pi-ip>`:8083 (not used in this project)
+http://`<raspberry-pi-ip>`:8084 (not used in this project)
 http://`<raspberry-pi-ip>`:8085
 ```
 Verify that each stream corresponds to the expected camera position.
