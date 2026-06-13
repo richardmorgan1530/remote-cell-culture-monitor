@@ -87,6 +87,14 @@ Possible use cases include:
 -   incubator monitoring
 -   low-cost lab automation
 -   open-source microscopy platforms
+------------------------------------------------------------------------
+
+# Example Image
+
+<p align="center">
+  <img src="docs/images/microscope.png" width="450"><br>
+  <em>Figure: Example image which was live streamed online.</em>
+</p>
 
 ------------------------------------------------------------------------
 
