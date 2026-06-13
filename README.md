@@ -39,6 +39,11 @@ allows researchers to:
 The system is intended for research and educational environments where
 low-cost and reproducible monitoring solutions are valuable.
 
+<p align="center">
+  <img src="images/raspi-usb-ports.png" width="450"><br>
+  <em>Figure: Raspberry Pi 5 USB ports showing positions used for CAM1–CAM4 mapping.</em>
+</p>
+
 ------------------------------------------------------------------------
 
 # Key Features
