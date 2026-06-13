@@ -1,6 +1,6 @@
 # Project Status
 
-This project is currently under active development and is being shared to demonstrate my technical skills in embedded systems, Linux administration, networking, software development, and laboratory automation.
+This project is currently under active development and is being shared to demonstrate my technical skills in embedded systems, Linux administration, networking, software development and laboratory automation.
 
 ------------------------------------------------------------------------
 
