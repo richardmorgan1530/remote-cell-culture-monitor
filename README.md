@@ -1,3 +1,9 @@
+# Project Status
+
+This project is currently under active development and is being shared to demonstrate my technical skills in embedded systems, Linux administration, networking, software development, and laboratory automation.
+
+------------------------------------------------------------------------
+
 # Remote Cell Culture Monitor
 
 ![Platform](https://img.shields.io/badge/platform-Raspberry%20Pi-red)
