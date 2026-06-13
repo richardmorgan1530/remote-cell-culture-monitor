@@ -83,11 +83,11 @@ microscope.conf → Microscope Camera connected to top left USB port
 video_device
 /dev/v4l/by-path/platform-xhci-hcd.1-usb-0:1:1.0-video-index0
 ```
-width 640 
-height 480 
+width 1280
+height 1024
 framerate 15
 
-stream_port 8081
+stream_port 8085
 ```
 This ensures the camera remains mapped correctly even if /dev/videoX
 numbers change.
