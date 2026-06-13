@@ -41,7 +41,7 @@ low-cost and reproducible monitoring solutions are valuable.
 
 <p align="center">
   <img src="docs/images/microscope.png" width="450"><br>
-  <em>Figure: Raspberry Pi 5 USB ports showing positions used for CAM1–CAM4 mapping.</em>
+  <em>Figure: Raspberry Pi 5, microscope and eyepiece camera.</em>
 </p>
 
 ------------------------------------------------------------------------
