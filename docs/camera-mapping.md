@@ -65,7 +65,7 @@ Camera 3 → Top Right USB port → IP Port 8083 (i will remove this later)
 Camera 4 → Bottom Right USB port→ IP Port 8084 (i will remove this later)
 Microscope → Top Left USB port → IP Port 8085 
 ```
-Each camera is configured in a separate Motion thread configuration for microscope.conf thread
+Each camera is configured in a separate Motion thread configuration
 file.
 ```
 thread1.conf → Camera 1 (not used in this project)
@@ -76,7 +76,7 @@ microscope.conf → Microscope Camera connected to top left USB port
 ```
 ------------------------------------------------------------------------
 
-# Example Thread Configuration
+# Example Thread Configuration (for microscope.conf thread)
 
 video_device
 /dev/v4l/by-path/platform-xhci-hcd.1-usb-0:1:1.0-video-index0
