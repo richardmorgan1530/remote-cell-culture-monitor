@@ -180,10 +180,7 @@ New contents:
 ```
 /etc/motion
 ├── motion.conf
-├── thread1.conf
-├── thread2.conf
-├── thread3.conf
-└── thread4.conf
+└── microscope.conf
 ```
 Each **thread file** corresponds to one camera.
 ------------------------------------------------------------------------
@@ -244,20 +241,15 @@ sudo nano /etc/motion/motion.conf
 ```
 Locate the thread definitions at the bottom of the file:
 ```
-thread /etc/motion/thread1.conf
-thread /etc/motion/thread2.conf
-thread /etc/motion/thread3.conf
-thread /etc/motion/thread4.conf
-```
-Comment out any unused cameras by adding `#` at the beginning of the line.
-Example (2 cameras only):
-```
-thread /etc/motion/thread1.conf
-thread /etc/motion/thread2.conf
+#thread /etc/motion/thread1.conf
+#thread /etc/motion/thread2.conf
 #thread /etc/motion/thread3.conf
 #thread /etc/motion/thread4.conf
+thread /etc/motion/microscope.conf
 ```
-After editing close and save the file:
+Comment out any unused cameras by adding `#` at the beginning of the line.
+
+After finish editing close and save the file:
 ```
 ctrl + x
 Y
@@ -268,7 +260,7 @@ camera device is not connected.
 
 ------------------------------------------------------------------------
 
-# Detect USB Cameras
+# Detect USB Microscope Camera
 
 If not installed:
 ```
@@ -308,44 +300,26 @@ sudo systemctl status motion
 
 Once Motion is running, open:
 ```
-http://`<raspberry-pi-ip>`:8081
+http://`<raspberry-pi-ip>`:8085
 ```
-Example for Camera 1:
+Example for camera with ip address 192.168.1.50:
 ```
-http://192.168.1.50:8081
+http://192.168.1.50:8085
 or
-http://raspberrypi.local:8081
+http://raspberrypi.local:8085
 ```
-Example for Camera 2:
-```
-http://192.168.1.50:8082
-or
-http://raspberrypi.local:8082
-```
-Example for Camera 3:
-```
-http://192.168.1.50:8083
-or
-http://raspberrypi.local:8083
-```
-Example for Camera 4:
-```
-http://192.168.1.50:8084
-or
-http://raspberrypi.local:8084
-```
-Each thread exposes a separate port.
 
 ------------------------------------------------------------------------
 
 # Typical Camera Ports
 
-| Camera   | Stream Port |
-| -------- | ----------- |
-| Camera 1 | 8081        |
-| Camera 2 | 8082        |
-| Camera 3 | 8083        |
-| Camera 4 | 8084        |
+| Camera     | Stream Port |
+| ---------- | ----------- |
+| Camera 1   | 8081        |
+| Camera 2   | 8082        |
+| Camera 3   | 8083        |
+| Camera 4   | 8084        |
+| Microscope | 8085        |
 ------------------------------------------------------------------------
 
 # Set Static IP Address (Raspberry Pi 5)
@@ -423,12 +397,13 @@ via a public domain name.
 Log into your router (e.g. cheap SIM card WiFi Router or mobile WiFi Router) and
 forward the following ports to your Raspberry Pi local IP address:
 
-| Camera | Internal Port | External Port |
-|-------|-------------|--------------|
-| Camera 1 | 8081 | 8081 |
-| Camera 2 | 8082 | 8082 |
-| Camera 3 | 8083 | 8083 |
-| Camera 4 | 8084 | 8084 |
+| Camera     | Internal Port | External Port |
+|------------|---------------|---------------|
+| Camera 1   | 8081          | 8081          |
+| Camera 2   | 8082          | 8082          |
+| Camera 3   | 8083          | 8083          |
+| Camera 4   | 8084          | 8084          |
+| Microscope | 8084          | 8084          |
 
 Example Raspberry Pi IP:
 
@@ -469,6 +444,7 @@ http://cams.yourdomain.com:8081
 http://cams.yourdomain.com:8082
 http://cams.yourdomain.com:8083
 http://cams.yourdomain.com:8084
+http://cams.yourdomain.com:8085
 ```
 
 ------------------------------------------------------------------------
@@ -482,6 +458,7 @@ cam1.yourdomain.com → <public-ip>
 cam2.yourdomain.com → <public-ip>
 cam3.yourdomain.com → <public-ip>
 cam4.yourdomain.com → <public-ip>
+microscope.yourdomain.com → <public-ip>
 ```
 
 Access:
@@ -489,6 +466,9 @@ Access:
 ```
 http://cam1.yourdomain.com:8081
 http://cam2.yourdomain.com:8082
+http://cam3.yourdomain.com:8083
+http://cam4.yourdomain.com:8084
+http://microscope.yourdomain.com:8085
 ```
 
 ------------------------------------------------------------------------
@@ -526,7 +506,7 @@ Recommended precautions:
 - Verify local access first:
 
 ```
-http://<raspberry-pi-ip>:8081
+http://<raspberry-pi-ip>:8085
 ```
 
 - Some ISPs block inbound ports — check router and ISP restrictions
