@@ -245,7 +245,7 @@ Locate the thread definitions at the bottom of the file:
 #thread /etc/motion/thread2.conf
 #thread /etc/motion/thread3.conf
 #thread /etc/motion/thread4.conf
-thread /etc/motion/microscope.conf
+thread /etc/motion/microscope.conf (connected to top left USB port - i.e. CAM 1 port)
 ```
 Comment out any unused cameras by adding `#` at the beginning of the line.
 
