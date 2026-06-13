@@ -93,7 +93,7 @@ Possible use cases include:
 
 <p align="center">
   <img src="docs/images/microscope-screenshot.png" width="450"><br>
-  <em>Figure: Example image which was live streamed online.</em>
+  <em>Figure: Example image which was live streamed on a local network.</em>
 </p>
 
 ------------------------------------------------------------------------
