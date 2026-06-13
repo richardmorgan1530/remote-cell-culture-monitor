@@ -92,7 +92,7 @@ Possible use cases include:
 # Example Image
 
 <p align="center">
-  <img src="docs/images/microscope.png" width="450"><br>
+  <img src="docs/images/microscope-screenshot.png" width="450"><br>
   <em>Figure: Example image which was live streamed online.</em>
 </p>
 
