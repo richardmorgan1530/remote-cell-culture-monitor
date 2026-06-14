@@ -59,19 +59,19 @@ These entries correspond to specific physical USB ports.
 
 # Camera Mapping Used in This Project (NOTE: only Microscope camera below is being used here)
 ```
-Camera 1 → Top Left USB port → IP Port 8081 (i will remove this later)
-Camera 2 → Bottom Left USB port → IP Port 8082 (i will remove this later)
-Camera 3 → Top Right USB port → IP Port 8083 (i will remove this later)
-Camera 4 → Bottom Right USB port→ IP Port 8084 (i will remove this later)
+Camera 1 → Top Left USB port → IP Port 8081 (in this project, microscope camera is using Top Left USB port)
+Camera 2 → Bottom Left USB port → IP Port 8082 (you can connect a USB camera here to monitor the environment if required)
+Camera 3 → Top Right USB port → IP Port 8083 (you can connect a USB camera here to monitor the environment if required)
+Camera 4 → Bottom Right USB port→ IP Port 8084 (you can connect a USB camera here to monitor the environment if required)
 Microscope → Top Left USB port → IP Port 8085 
 ```
 Each camera is configured in a separate Motion thread configuration
 file.
 ```
-thread1.conf → Camera 1 (not used in this project)
-thread2.conf → Camera 2 (not used in this project)
-thread3.conf → Camera 3 (not used in this project)
-thread4.conf → Camera 4 (not used in this project)
+thread1.conf → Camera 1 (microscope.conf camera is using this cameras USB port)
+thread2.conf → Camera 2 (not used in this project, but you could connect a USB camera here)
+thread3.conf → Camera 3 (not used in this project, but you could connect a USB camera here)
+thread4.conf → Camera 4 (not used in this project, but you could connect a USB camera here)
 microscope.conf → Microscope Camera connected to top left USB port
 ```
 ------------------------------------------------------------------------
