@@ -297,10 +297,7 @@ remote-cell-culture-monitor
 ├── configs
 │    └── README.md
 │       ├── motion.conf
-│       ├── thread1.conf
-│       ├── thread2.conf
-│       ├── thread3.conf
-│       └── thread4.conf
+│       └── microscope.conf
 ├── web
 │    └── index.html
 └── hardware
