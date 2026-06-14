@@ -2,6 +2,8 @@
 
 This project is currently under active development and is being shared to demonstrate my technical skills in embedded systems, Linux administration, networking, software development and laboratory automation.
 
+A brightfield microscope is being used here in place of an inverted cell culture microscope for testing purposes only. The intention is to use an inverted cell culture microscope mounted inside an incubator.
+
 ------------------------------------------------------------------------
 
 # Remote Cell Culture Monitor
