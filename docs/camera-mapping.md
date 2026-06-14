@@ -102,10 +102,10 @@ To confirm cameras are mapped correctly:
 Example:
 ```
 http://`<raspberry-pi-ip>`:8081 (not used in this project)
-http://`<raspberry-pi-ip>`:8082 (not used in this project)
-http://`<raspberry-pi-ip>`:8083 (not used in this project)
-http://`<raspberry-pi-ip>`:8084 (not used in this project)
-http://`<raspberry-pi-ip>`:8085
+http://`<raspberry-pi-ip>`:8082 (not used in this project, but you could connect a USB camera here)
+http://`<raspberry-pi-ip>`:8083 (not used in this project, but you could connect a USB camera here)
+http://`<raspberry-pi-ip>`:8084 (not used in this project, but you could connect a USB camera here)
+http://`<raspberry-pi-ip>`:8085 (microscope camera)
 ```
 Verify that each stream corresponds to the expected camera position.
 
