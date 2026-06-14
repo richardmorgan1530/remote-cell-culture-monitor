@@ -21,6 +21,7 @@ If cameras are configured using:
 /dev/video0
 /dev/video1
 /dev/video2
+/dev/video3
 ```
 The numbering may change after:
 
@@ -47,6 +48,7 @@ List persistent device paths:
 ls -l /dev/v4l/by-path
 ```
 Example output linked to each of the 4 individual USB ports on the Raspberry Pi:
+
 ```
 platform-xhci-hcd.1-usb-0:1:1.0-video-index0 -\> ../../video0
 platform-xhci-hcd.1-usb-0:2:1.0-video-index0 -\> ../../video1
