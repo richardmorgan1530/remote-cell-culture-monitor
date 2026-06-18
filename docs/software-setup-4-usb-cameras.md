@@ -1,4 +1,4 @@
-# Software Setup (for 4 USB cameras - not the microscope)
+# Software Setup (for 4 USB cameras - not the microscope - there are 4 USB ports, you could attach 3 additional USB web cameras etc...)
 
 This guide describes how to install and configure the software required
 to run the **Remote Cell Culture Monitor** system on a **Raspberry Pi
